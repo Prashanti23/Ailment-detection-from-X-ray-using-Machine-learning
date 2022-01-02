@@ -22,7 +22,7 @@ from keras.preprocessing import image
 
 """
 Part 1: Dataset Preprocessing.
-Author: Vijeta Nayak
+Authored by Vijeta Nayak
 """
 # Read the dataset
 dataset=pd.read_csv("archive/Data_Entry_2017.csv")
@@ -225,6 +225,10 @@ layers_ = model.layers
 print('total number of layers =',len(layers_))
 """
 
+"""
+Part 4: Training 
+Authored by Bhavya Bhimani
+"""
 #Training the model
 history = model.fit(train_generator, 
                     validation_data=valid_generator,
@@ -233,7 +237,7 @@ history = model.fit(train_generator,
                     epochs = 5)
 
 """
-Part 3: Training and Evaluation
+Part 5: Evaluation
 Authored by Prashanti Pamulapati
 """
 
