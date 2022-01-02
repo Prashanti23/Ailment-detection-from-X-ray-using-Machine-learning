@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import os
-import time
+import time 
 import pickle
 
 import keras
@@ -77,7 +77,6 @@ dataset['path'] = dataset['Image Index'].map(all_image_paths.get)
 dataset.drop(['Unnamed: 11'], inplace=True, axis=1)
 dataset.head
 
-
 train, test = train_test_split(dataset, test_size=0.2)
 train, valid = train_test_split(dataset, test_size=0.25)
 
@@ -89,7 +88,7 @@ columns = list(columns)
 print(columns)
 
 
-train.head
+print(train.head)
 
 
 def get_train_generator(df, x_col, y_cols, shuffle=True, batch_size=8, seed=1, target_w = 900, target_h = 900):
@@ -270,7 +269,8 @@ def load_C3M3_model():
     model.compile(optimizer='adam', loss=keras.losses.categorical_crossentropy)
     print("Compiled Model")
 
-    return model
+    return model 
+
 model = load_C3M3_model()
 
 layers_ = model.layers
@@ -287,7 +287,6 @@ history = model.fit(train_generator,
                               steps_per_epoch=10, 
                               validation_steps=2, 
                               epochs = 1)
-
 plt.plot(history.history['loss'])
 plt.ylabel("loss")
 plt.xlabel("epoch")
