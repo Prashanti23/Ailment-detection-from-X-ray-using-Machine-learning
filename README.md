@@ -1,1 +1,2 @@
-# medical-diagnosis-of-chest-X-Rays
+# Medical Diagnosis of Chest Xrays using CNN and Transfer Learning
+
