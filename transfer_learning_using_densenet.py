@@ -22,7 +22,7 @@ from keras.preprocessing import image
 
 """
 Part 1: Dataset Preprocessing.
-Authored by Vijeta Nayak
+Authored by Vijeta Nayak-
 """
 # Read the dataset
 dataset=pd.read_csv("archive/Data_Entry_2017.csv")
