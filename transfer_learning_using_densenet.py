@@ -236,18 +236,16 @@ history = model.fit(train_generator,
                     validation_steps=25, 
                     epochs = 5)
 
-"""
-Part 5: Evaluation
-Authored by Prashanti Pamulapati
-"""
-
-# Evaluation
 plt.plot(history.history['loss'])
 plt.ylabel("loss")
 plt.xlabel("epoch")
 plt.title("Training Loss Curve")
 plt.show()
 
+"""
+Part 5: Evaluation
+Authored by Prashanti Pamulapati
+"""
 # Prediction
 predicted_vals = model.predict_generator(test_generator, steps = len(test_generator))
 
